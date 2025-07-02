@@ -45,7 +45,7 @@ class TextBoxController(Subject):
         self.status = False
 
     def get_total_heigth(self):
-        return self.text_box.get_space_height() * self.text_box.count_textbox_lines()
+        return self.get_space_height() * self.count_textbox_lines()
     
     #tab methods
     def get_status(self):

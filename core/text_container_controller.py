@@ -10,5 +10,7 @@ class TextMainFrameController:
                    relheight=relheight, 
                    relwidth=relwidth, 
                    anchor=anchor)
+
     def create_new_view(self, path):
         return ViewController(self.view, path)
+    

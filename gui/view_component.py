@@ -1,6 +1,6 @@
 import customtkinter as ctk
 
-class TextFrame(ctk.CTkFrame):
+class TextFrame(ctk.CTkScrollableFrame):
     def __init__(self,parent):
         super().__init__(parent, fg_color="pink", corner_radius=0 )
         

@@ -11,3 +11,5 @@ class UserInputManger():
     @staticmethod
     def  ask_yes_or_no(title, question):
         return  messagebox.askyesno(title, question) 
+
+

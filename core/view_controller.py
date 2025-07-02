@@ -8,19 +8,23 @@ from .guter import GutterController
 
 
 class ViewController(Observer, Subject):
-    def __init__(self,parent, path):
+    def __init__(self, parent, path):
         super().__init__()
         self.view = TextFrame(parent)
         #canvas_manager
-        self.canvas = tk.Canvas(self.view)
-        self.canvas.pack(expand=True, fill="both")
+        # self.canvas = tk.Canvas(parent, background="red")
+        # self.canvas.pack(expand=True, fill="both", )
+        
+
         
         #components
         
-        self.text_box = TextBoxController(self.canvas, path)
-        self.guter = GutterController(self.canvas)
+        self.text_box = TextBoxController(self.view, path)
+        self.guter = GutterController(self.view)
 
+        # self.canvas.create_window((0,0), window=self.view, anchor="nw", width=parent.winfo_width())
 
+        #self.canvas.configure(scrollregion=(0,0,  parent.winfo_width() ,self.text_box.get_total_heigth()))
         
     
         ##self.scroll = ScrollContainer(self.canvas, self.text_box)
@@ -36,6 +40,7 @@ class ViewController(Observer, Subject):
         self.text_box.pack("left", True, "both")
         self.guter.pack(side="left", fill="y", before=self.text_box.get_view())
         self.view.place(relx=0, rely=0.0, relheight=1, relwidth=1, anchor="nw")
+        # self.canvas.place(relx=0, rely=0.0, relheight=1, relwidth=1, anchor="nw")
 
         #lift 
         self.view.lift()
