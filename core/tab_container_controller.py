@@ -3,6 +3,7 @@ from gui.tab_container_component import TabMainFrame
 from .tab_controller import TabController
 
 class TabMainFrameController:
+    
     def __init__(self, parent):
         self.view = TabMainFrame(parent)
     
@@ -16,6 +17,5 @@ class TabMainFrameController:
                         )
     
     def create_tab(self, file):
-        return TabController(self.view, file)
 
-    
+        return TabController(self.view, file)

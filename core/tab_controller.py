@@ -34,15 +34,15 @@ class TabController(Subject, Observer ):
         self.view.bind("<Button-1>", self.stacke_frame)
 
         
-    def stacke_frame(self, event):
+    def stacke_frame(self, event)-> None:
         for observer in self._observers:
                 observer.update(Event("STACK_VIEW", None))
     
-    def update(self, event):
+    def update(self, event) -> None:
         if event.get_type() == "MODIFIED_TEXT_BOX":
             self.change_modified_status(event.get_data().get_status())
 
-    def change_modified_status(self, status):
+    def change_modified_status(self, status)-> None:
         path = "";
         if status and not self.last_status :
               self.frame_name.set(value=self.path.name + " *")
@@ -50,7 +50,7 @@ class TabController(Subject, Observer ):
               self.frame_name.set(value=self.path.name + " ")
         self.last_status = status
     
-    def close_curren_file(self):
+    def close_curren_file(self) -> None:
         if not self.last_status:
            self._destroy()
            return
@@ -63,9 +63,10 @@ class TabController(Subject, Observer ):
         self._destroy()
          
     
-    def _destroy(self):
+    def _destroy(self)-> None:
            for observer in self._observers:
                 observer.update(Event("SELF_DESTRUCTION", None))
            self.view.destroy()
-    def pack(self):
+    
+    def pack(self)-> None:
         self.view.pack(side="left",ipadx=20, padx=3)

@@ -5,7 +5,9 @@ import customtkinter as ctk
 
 ## SOLUTION USE TEXT_BOX WHY? I DONT KNOW HOW SYNCORNYCE THAT WHIT
 class GutterController:
+    
     def __init__(self, parent):
+
         self.view = Gutter(parent)
         self.lift()
         self.guter_elements = []
@@ -13,22 +15,28 @@ class GutterController:
         #self.charge_lines()
 
     def pack (self, side, fill, before):
+
         self.view.pack(side=side, fill=fill, before=before)
     
     def update(self, event):
+         
          if event.get_type() == "MODIFIED_TEXT_BOX":
             self.charge_lines_or_distroy(event)
 
     def lift(self):
+        
         self.view.lift()
 
     def charge_lines_or_distroy(self, event):
+
         lines_number = event.get_data().count_textbox_lines()
         current_guter_numbers = len(self.guter_elements)
+
         if  current_guter_numbers < lines_number:   
-             self._create_new_childrens( event,  current_guter_numbers, lines_number)
-        else:
-            self._distroy_old_childrens(current_guter_numbers, lines_number)
+            self._create_new_childrens( event,  current_guter_numbers, lines_number)
+            return
+        
+        self._distroy_old_childrens(current_guter_numbers, lines_number)
         
     def _create_new_childrens(self, event,  current_guter_numbers, lines_number):
         for _ in range(lines_number - current_guter_numbers ):
