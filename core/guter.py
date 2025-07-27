@@ -1,5 +1,9 @@
 from gui.guter_component import Gutter
 import customtkinter as ctk
+
+
+
+## SOLUTION USE TEXT_BOX WHY? I DONT KNOW HOW SYNCORNYCE THAT WHIT
 class GutterController:
     def __init__(self, parent):
         self.view = Gutter(parent)

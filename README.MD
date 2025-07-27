@@ -62,7 +62,7 @@ While Tkinter is great for rapid prototyping and learning, it has limitations in
 1. Clone the repository.
 2. Install dependencies:
     ```bash
-    pip install customtkinter tkinterdnd2
+    pip install -r requierements.txtb
     ```
 3. Run the application:
     ```bash

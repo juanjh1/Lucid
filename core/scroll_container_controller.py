@@ -10,10 +10,9 @@ class ScrollController:
         
     
 
-             # events
+        # events
         self.text_box_adapter.bind("<Configure>", lambda e: self.configure_size_of_scroll_bar())
         parent.bind("<Configure>", lambda e: self.configure_size_of_scroll_bar())
-
         self.bind("<Button-1>", lambda e: print(e))
         self.scroll.bind("<B1-Motion>", lambda e: self.calculate_move(e))
 
