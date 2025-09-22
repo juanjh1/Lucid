@@ -16,7 +16,7 @@ class FileManager():
         return path.absolute()
      
     @staticmethod
-    def save_file(path: Path, content: str) -> str:
+    def save_file(path: Path, content: str) :
         absolute_path = FileManager._validate_readable_path(path)
         with open(absolute_path, 'w', encoding='utf-8') as f:
             f.write(content)

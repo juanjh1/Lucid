@@ -21,9 +21,7 @@ class  NavItemButtonComponent:
             self.destroy_buttons()
             return
         
-        self.setup_buttons()
-
-           
+        self.setup_buttons()     
 
     def setup_buttons(self):
 
@@ -37,7 +35,8 @@ class  NavItemButtonComponent:
             self.options.lift()
 
     def destroy_buttons(self):
-            self.options.destroy()
+            if self.options:
+                self.options.destroy()
             self.options = None
         
     def get_view(self):
