@@ -35,4 +35,6 @@ class TextFrame(ctk.CTkScrollableFrame):
 
     # def get_text_box_status(self):
     #     self.text_box.get_text_box_status()
-    
+    def show(self):
+        self.place(relx=0, rely=0.0, relheight=1, relwidth=1, anchor="nw")
+

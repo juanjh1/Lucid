@@ -1,92 +1,83 @@
 # Lucid Editor (Tkinter Prototype)
 
-Lucid is a modular, multi-tab text/code editor prototype built with Python and [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter).  
-This project was created as a learning experience and as a starting point for a future migration to modern web technologies (Electron, React, TypeScript).
+Lucid Editor is a modular, multi-tab text and code editor prototype built with Python and CustomTkinter
+.
+This project was developed as a personal learning exercise and as a preliminary step toward a future migration to modern web technologies (Electron, React, TypeScript).
 
----
+## Features (Current State)
 
-## 🚀 Features (Current State)
+- Multi-tab support: open and close multiple files in separate tabs.
 
-- **Multi-tab support:** Open and close multiple files in separate tabs.
-- **File opening:** Select and load files into the editor.
-- **Basic text editing:** Edit file contents in a custom text area.
-- **Line gutter:** Displays line numbers alongside the text area.
-- **Custom scroll bar:** Scroll through large files with a custom scrollbar.
-- **Modular architecture:** Components and controllers are separated for maintainability.
-- **Observer pattern:** Decoupled communication between controllers and views.
-- **Basic file change detection:** Tracks modifications in the editor.
+- File loading: select and load files into the editor.
 
----
+- Basic text editing: edit file contents in a custom text area.
 
-## 🛠️ What Works
+- Line gutter: displays line numbers alongside the text area.
+
+- Custom scroll bar: scroll through large files with a custom scrollbar.
+
+- Modular architecture: components and controllers are separated for maintainability.
+
+- Observer pattern: decoupled communication between controllers and views.
+
+- File change detection: tracks modifications in the editor.
+
+# Current Status
 
 - Tabs can be created and closed dynamically.
-- Each tab is linked to its own text editor instance.
-- File content loads into the editor and can be edited.
-- The UI is responsive and modular, making it easy to extend or refactor.
-- The codebase is organized using controllers, adapters, and utility modules.
 
----
+- Each tab is linked to its own editor instance.
 
-## 🎯 Project Goal
+- File content loads into the editor and can be modified.
 
-The main goal of this project is to build a **functional, modular editor prototype** in Python/Tkinter as a proof of concept and learning exercise.  
-**Due to the limitations of Tkinter for modern, high-performance editors, the plan is to migrate this project to Electron with React and TypeScript.**  
-This repository will serve as the “before” snapshot, demonstrating the evolution of the project and the developer’s growth.
+- The user interface is modular, making it easier to extend and refactor.
 
----
+- The codebase is organized with controllers, adapters, and utility modules.
 
-## 📝 Next Steps / To-Do
+# Project Goal
 
-- [ ] Improve file saving and loading (add Save/Save As).
-- [ ] Add search and replace functionality.
-- [ ] Implement basic syntax highlighting.
-- [ ] Refactor and further decouple components.
-- [ ] Polish UI/UX (icons, themes, etc.).
-- [ ] Prepare for migration: document architecture and logic.
+The objective of this project is to explore the design of a functional, modular editor prototype in Python/Tkinter as a proof of concept.
+Because Tkinter has limitations for building modern editors, the long-term plan is to migrate this project to Electron with React and TypeScript.
+This repository will remain as a reference for the initial prototype, illustrating the project’s evolution and the developer’s learning process.
 
----
+# Planned Improvements
 
-## ⚡ Why Migrate?
+Improve file saving and loading (add “Save” and “Save As”).
 
-While Tkinter is great for rapid prototyping and learning, it has limitations in terms of UI flexibility, performance, and modern features.  
-**Migrating to Electron + React + TypeScript will allow:**
-- A more modern, customizable UI.
-- Better performance for large files and complex features.
-- Easier integration with web technologies and extensions.
+Add search and replace functionality.
 
----
+Implement basic syntax highlighting.
 
-## 📂 How to Run
+Further decouple and refactor components.
 
-1. Clone the repository.
-2. Install dependencies:
-    ```bash
-    pip install -r requierements.txtb
-    ```
-3. Run the application:
-    ```bash
-    python man.py
-    ```
+Improve UI/UX (themes, icons, etc.).
 
----
+Document architecture and design decisions in preparation for migration.
 
-## 🙌 Contributing
+Motivation for Migration
 
-This project is currently a personal learning project, but suggestions and feedback are welcome!
+Tkinter is suitable for rapid prototyping and educational purposes but has limitations in flexibility, performance, and modern UI features.
+Migrating to Electron + React + TypeScript will enable:
 
----
+A more customizable and modern interface.
 
-## 📸 Screenshots
+Better handling of large files and advanced features.
 
-*Add screenshots here as the UI evolves.*
+Easier integration with extensions and web technologies.
 
----
+How to Run
 
-## License
+Clone the repository.
 
-MIT License
+Install dependencies:
+```
+pip install -r requirements.txt
+``
 
----
+Run the application:
+```
+python main.py
+```
+Contributing
 
-**This repository will remain as a reference for the initial prototype. The next version will be developed using Electron, React, and TypeScript.**
+This is a personal project created for learning purposes. Feedback and suggestions are welcome, but active collaboration is not expected.

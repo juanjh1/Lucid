@@ -9,8 +9,3 @@ class NavMenu(ctk.CTkFrame):
         self.nav_item_button = NavItemButtonComponent(self, parent.options_adapter(), "File")
         self.nav_item_button.pack(side="left")
 
-        # self.close_button = ctk.CTkButton(self, text="x", command=lambda:parent.quit())
-        # self.close_button.pack(side="right")
-
-        
-        

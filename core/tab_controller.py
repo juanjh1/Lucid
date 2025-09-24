@@ -38,15 +38,16 @@ class TabController(Subject, Observer ):
         
     def stacke_frame(self, _) -> None:
         for observer in self._observers:
-                observer.update(Event("STACK_VIEW"))
+            observer.update(Event(Event.EVENT_TYPES.STACK_VIEW))
     
     @override 
     def update(self, event: Event) -> None:
-        if Event.EVENT_TYPES.MODIFIED_TEXT_BOX == event.get_type():
+        if Event.EVENT_TYPES.MODIFIED_TEXT_BOX.is_equal(event.get_type()):
             self.change_modified_status(event.get_data().get("status"))
 
     def change_modified_status(self, status)-> None:
         path = ""
+        
         if status and not self.last_status :
               path = " *"
         if not status and self.last_status:

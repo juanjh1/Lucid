@@ -10,12 +10,12 @@ class GutterController():
         self.lift()
         self.view.disable_edition()
     # this dont work here, need change to show 
-    def pack (self, side, fill, before):
-        self.view.pack(side=side, fill=fill, before=before)
+    def show (self, before):
+        self.view.show(before=before)
     
     def update(self, event: Event):
 
-         if Event.EVENT_TYPES.MODIFIED_TEXT_BOX == event.get_type():
+         if Event.EVENT_TYPES.MODIFIED_TEXT_BOX.is_equal(event.get_type()):
             self.refresh_gutter_lines(event.get_data().get("lines")())
 
     def lift(self):

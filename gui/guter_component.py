@@ -33,14 +33,17 @@ class Gutter(ctk.CTkTextbox):
         current_file = self.get_full_content()  
 
         if(len(current_file)<= 1):
-            self._run_with_editable(self.insert_at_start, "".join([str(i+1)+"\n" for i in range(lines)]) )
+            self._run_with_editable(self.insert_at_start, "".join([str(i+1)+"\n" for i in range(lines-1)]) )
 
         else:
-            current_lines = self.get_lines_of_file(current_file) 
-            addition = lines - current_lines + 1
+
+            current_lines = self.get_lines_of_file(current_file)-1 
+            addition = lines - current_lines 
             print(f"addtition: {addition} lines_number: {lines} current_lines: {current_lines}") 
             if(addition > 0):
                 self._run_with_editable(self.add_lines, current_lines,addition ) 
             else:
                 ...
-   
+    def show(self, before):
+        self.pack(side="left", fill="y", before=before)
+
